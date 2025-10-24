@@ -1,17 +1,19 @@
-export SHELL=zsh
-eval "$(sheldon source)"
+zmodload zsh/zprof
 
 # Load autocompletion
-autoload -U compinit; compinit
+autoload -Uz compinit
+
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+	compinit;
+else
+	compinit -C;
+fi;
+
 zstyle ':completion:*' menu select
-# fpath+=~/.zfunc
 
-# Custom function to navigate
-function ..() {
-  cd "${1:-..}"
-}
+export ZSH="$HOME/.local/share/sheldon/repos/github.com/ohmyzsh/ohmyzsh"
 
-export PATH="/home/chion/.cache/.bun/bin:$PATH"
+eval "$(sheldon source)"
 
 # Various alias
 alias ls=eza
@@ -25,6 +27,7 @@ alias ssh="kitten ssh"
 
 eval "$(zoxide init zsh)"
 
-fastfetch --kitty-icat $HOME/dotfiles/ricing/goku-sunset.gif --logo-width 40
-
+# fastfetch --kitty-icat $HOME/dotfiles/ricing/goku-sunset.gif --logo-width 40
+fastfetch
 eval "$(starship init zsh)"
+# zprof
