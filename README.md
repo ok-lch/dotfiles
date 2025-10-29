@@ -23,11 +23,12 @@ The idea is to install [mise](https://mise.jdx.dev/) to install tools and [chezm
 ### Requirements
 
 - [Mise](https://mise.jdx.dev/getting-started.html)
+- [Zsh](https://www.zsh.org/)
 
 ###
 - Install uv using mise: `mise use -g github:twpayne/chezmoi`
 - Initialise dotfiles repository: `mise x -- chezmoi init ok-lch --apply`
-- Update mise to download all tools
+- Done
 
 
 ### Optional
