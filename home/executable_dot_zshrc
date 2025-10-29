@@ -4,7 +4,7 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 # Dotbins
-source $HOME/.dotbins/shell/zsh.sh
+# source $HOME/.dotbins/shell/zsh.sh
 
 # Load autocompletion
 autoload -Uz compinit
@@ -20,12 +20,42 @@ export ZSH="$HOME/.local/share/sheldon/repos/github.com/ohmyzsh/ohmyzsh"
 
 eval "$(sheldon source)"
 
-# Various alias
-alias n=nvim
-alias vimdiff="nvim -d"
-# alias md=mkdir
+# Config and alias per tool
+
+## Bat
+alias bat="bat --paging=never"
+alias cat="bat --plain --paging=never"
+
+## Eza
+alias ls=eza
+alias l="eza -lah --git"
+
+## Fzf
+source <(fzf --zsh)
+
+## Helix
+alias h=helix
+
+## Lazygit
+# alias lg="lazygit"
+
+## Zellij
+alias tmux=zellij
+
+## Neovim
+# alias n=nvim
+# alias vimdiff="nvim -d"
+
+## Kitty
 alias ssh="kitten ssh"
 
+##
+
+# Showing information
 # fastfetch --kitty-icat $HOME/dotfiles/ricing/goku-sunset.gif --logo-width 40
 fastfetch
+
+# Prompt
+eval "$(starship init zsh)"
+
 # zprof

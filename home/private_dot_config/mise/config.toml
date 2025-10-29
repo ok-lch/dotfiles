@@ -1,11 +1,11 @@
 [tools]
 "github:BurntSushi/ripgrep" = "latest"
+"github:Wilfred/difftastic" = "latest"
 "github:ajeetdsouza/zoxide" = "latest"
 "github:eza-community/eza" = "latest"
 "github:helix-editor/helix" = "latest"
 "github:jesseduffield/lazygit" = "latest"
 "github:junegunn/fzf" = "latest"
-"github:romkatv/zsh-bin" = "latest"
 "github:rossmacarthur/sheldon" = "latest"
 "github:sharkdp/bat" = "latest"
 "github:starship/starship" = "latest"
