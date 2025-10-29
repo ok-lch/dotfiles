@@ -8,7 +8,7 @@ Here is my configuration files for different tools that I use.
 
 The goal of that project is to setup tools to develop or debug server easily and in a replicable way.
 
-It mainly relies on storing config files and using [stow](https://www.gnu.org/software/stow/) to populate them.
+It mainly relies on storing config files and populating them with [chezmoi](https://www.chezmoi.io/) (previously with [stow](https://www.gnu.org/software/stow/) ).
 
 ```sh
 stow -t $HOME -d $HOME/dotfiles/dotfiles $i
@@ -16,27 +16,25 @@ stow -t $HOME -d $HOME/dotfiles/dotfiles $i
 
 There is also possibilities to install binaries and tools without the need of admin rights.
 
-## Option 1: Installing mise and dotbins
+## Option 1: Installing mise
 
-The idea is to install [mise](https://mise.jdx.dev/) to install tools and package managers like [uv](https://docs.astral.sh/uv/) or [dotbins](https://github.com/basnijholt/dotbins).
+The idea is to install [mise](https://mise.jdx.dev/) to install tools and [chezmoi](https://www.chezmoi.io) to copy config files.
 
 ### Requirements
 
 - [Mise](https://mise.jdx.dev/getting-started.html)
-- [Stow](https://www.gnu.org/software/stow/)
 
 ###
-- Install uv using mise: `mise use -g uv`
-- Install dotbins: `uv tool install dotbins`
-- Clone this repo in your HOME directory: `git clone https://github.com/LaurentChion/dotfiles.git -o ~/.dotfiles`
-- Go into it: `cd .dotfiles`
+- Install uv using mise: `mise use -g github:twpayne/chezmoi`
+- Initialise dotfiles repository: `mise x -- chezmoi init ok-lch --apply`
+- Update mise to download all tools
+
 
 ### Optional
 
 - [Kitty](https://sw.kovidgoyal.net/kitty/binary/)
 
-
-## Option 2: With a container
+## Alternative option: Working in  a container
 
 The idea is to create a container, install needed tool for developement and to setup various configuration without the need of admin rights.
 

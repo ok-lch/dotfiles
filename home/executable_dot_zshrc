@@ -33,11 +33,8 @@ alias l="eza -lah --git"
 ## Fzf
 source <(fzf --zsh)
 
-## Helix
-alias h=helix
-
 ## Lazygit
-# alias lg="lazygit"
+alias lg="lazygit"
 
 ## Zellij
 alias tmux=zellij
