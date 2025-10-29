@@ -1,5 +1,7 @@
 # zmodload zsh/zprof
 
+eval "$($HOME/.local/bin/mise activate zsh)"
+
 # For uv tools
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -46,7 +48,8 @@ alias tmux=zellij
 ## Kitty
 alias ssh="kitten ssh"
 
-##
+## Zoxide
+eval "$(zoxide init zsh)"
 
 # Showing information
 # fastfetch --kitty-icat $HOME/dotfiles/ricing/goku-sunset.gif --logo-width 40
