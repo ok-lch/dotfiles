@@ -1,0 +1,24 @@
+[tools]
+"github:BurntSushi/ripgrep" = "latest"
+"github:ajeetdsouza/zoxide" = "latest"
+"github:eza-community/eza" = "latest"
+"github:helix-editor/helix" = "latest"
+"github:jesseduffield/lazygit" = "latest"
+"github:junegunn/fzf" = "latest"
+"github:romkatv/zsh-bin" = "latest"
+"github:rossmacarthur/sheldon" = "latest"
+"github:sharkdp/bat" = "latest"
+"github:starship/starship" = "latest"
+"github:twpayne/chezmoi" = "latest"
+"github:zellij-org/zellij" = "latest"
+node = "latest"
+pnpm = "latest"
+poetry = "latest"
+usage = "latest"
+uv = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["python"]
+
+[settings.pipx]
+uvx = true

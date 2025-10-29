@@ -58,6 +58,11 @@ tools:
       bash,zsh: eval "$(starship init __DOTBINS_SHELL__)" # Use placeholder for bash and zsh
       fish: starship init fish | source
 
+  zsh:
+    repo: romkatv/zsh-bin
+    extract_archive: true
+
+
   # Tmux replacement
   zellij:
     repo: zellij-org/zellij
