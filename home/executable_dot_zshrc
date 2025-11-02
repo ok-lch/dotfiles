@@ -1,12 +1,9 @@
 # zmodload zsh/zprof
 
-eval "$($HOME/.local/bin/mise activate zsh)"
+eval "$($(which mise) activate zsh)"
 
 # For uv tools
 export PATH="$HOME/.local/bin:$PATH"
-
-# Dotbins
-# source $HOME/.dotbins/shell/zsh.sh
 
 # Load autocompletion
 autoload -Uz compinit
@@ -52,8 +49,8 @@ alias ssh="kitten ssh"
 eval "$(zoxide init zsh)"
 
 # Showing information
-# fastfetch --kitty-icat $HOME/dotfiles/ricing/goku-sunset.gif --logo-width 40
-fastfetch
+fastfetch --kitty-icat $(shuf -n1 -e $HOME/.local/share/chezmoi/ricing/img/*)
+# fastfetch
 
 # Prompt
 eval "$(starship init zsh)"
