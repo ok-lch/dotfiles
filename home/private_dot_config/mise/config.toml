@@ -1,4 +1,8 @@
 [tools]
+bun = "latest"
+"cargo:csvlens" = "latest"
+"cargo:xleak" = "latest"
+git-lfs = "latest"
 "github:BurntSushi/ripgrep" = "latest"
 "github:Wilfred/difftastic" = "latest"
 "github:ajeetdsouza/zoxide" = "latest"
@@ -12,14 +16,19 @@
 "github:starship/starship" = "latest"
 "github:twpayne/chezmoi" = "latest"
 "github:zellij-org/zellij" = "latest"
+lazyssh = "latest"
 node = "latest"
+"pipx:cheznav" = "latest"
 pnpm = "latest"
 poetry = "latest"
+rust = "latest"
 usage = "latest"
 uv = "latest"
+yazi = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]
 
 [settings.pipx]
 uvx = true
+
